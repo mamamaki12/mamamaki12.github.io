@@ -51,6 +51,8 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html 404.html images works _site/
+          # Google Search Console の所有者の確認用（消さない）
+          cp googledacb7bfdaa89fa1d.html _site/
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
