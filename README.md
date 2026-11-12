@@ -6,6 +6,8 @@
 - `main` に入ると GitHub Actions（`.github/workflows/pages.yml`）が GitHub Pages に公開する
 - 手元で見る：`python3 -m http.server 4173` を実行して http://localhost:4173 を開く
 - 差し色は各ページの `<style>` の `--accent`
+- 検索エンジン向け：`sitemap.xml`（トップとすべての作品ページ）・`robots.txt`、各ページの `<head>` の構造化データ（JSON-LD。トップはサイトと人、作品ページは Web アプリ）。作品を足したら sitemap.xml にも足し、構造化データも同じ形で入れる（`scripts/seo.test.mjs` が確かめる）
+- `googledacb7bfdaa89fa1d.html` は Google Search Console の所有者の確認用。消さない
 
 ## トップの「いま」（自動更新）
 
