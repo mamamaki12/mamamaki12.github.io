@@ -3,6 +3,9 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # 毎朝 6:07（日本時間）に My海馬の「いま」を読み直して公開し直す
+  schedule:
+    - cron: '7 21 * * *'
   workflow_dispatch:
 
 permissions:
@@ -20,11 +23,38 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      KAIBA_TOKEN: ${{ secrets.KAIBA_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: 「いま」のしくみのテスト
+        run: node --test scripts/*.test.mjs
+
+      # My海馬（非公開）からは「いま」のノート 1 つだけを取り出す
+      - name: My海馬の「いま」を読む
+        if: env.KAIBA_TOKEN != ''
+        uses: actions/checkout@v4
+        with:
+          repository: mamamaki12/my-kaiba-ai
+          token: ${{ secrets.KAIBA_TOKEN }}
+          path: .kaiba
+          sparse-checkout: |
+            20_開発/ポートフォリオのいま.md
+          sparse-checkout-cone-mode: false
+
+      - name: 「いま」を書き換える
+        run: node scripts/update-now.mjs ".kaiba/20_開発/ポートフォリオのいま.md" index.html
+
+      # 公開するのはサイトのファイルだけ（My海馬やスクリプトは含めない）
+      - name: 公開するファイルを集める
+        run: |
+          mkdir _site
+          cp -r index.html 404.html images works _site/
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deployment
         uses: actions/deploy-pages@v4
