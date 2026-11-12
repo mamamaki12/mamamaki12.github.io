@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>しんご｜鹿児島でWebアプリを作っています</title>
+<meta name="description" content="鹿児島大学 3 年のしんごが作った Web アプリの一覧です。ゲーム、写真編集、時間割、学祭のレジなど 11 作品。">
+<meta property="og:title" content="しんご｜鹿児島でWebアプリを作っています">
+<meta property="og:description" content="鹿児島大学 3 年のしんごが作った Web アプリの一覧です。ゲーム、写真編集、時間割、学祭のレジなど 11 作品。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mamamaki12.github.io/">
+<meta property="og:image" content="https://mamamaki12.github.io/images/open-world.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="canonical" href="https://mamamaki12.github.io/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+:root{--accent:#FF4B1F}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0C0C0C}
+img{height:auto}
+a{color:#EDEAE3}a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+[hidden]{display:none!important}
+@media (max-width:640px){[data-cat] img{flex-basis:100%!important;width:100%!important}}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #0C0C0C; color: #EDEAE3; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 16px; line-height: 1.8">
+
+<header style="max-width: 1320px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 32px">
+<a href="#top" style="display: inline-flex; align-items: center; min-height: 44px; font-size: 18px; font-weight: 900; text-decoration: none">しんご</a>
+<nav aria-label="ページ内" style="display: flex; flex-wrap: wrap; gap: 0 28px; font-size: 14px; font-weight: 700">
+<a href="#works" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none">作品</a>
+<a href="#about" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none">自己紹介</a>
+<a href="#contact" style="display: inline-flex; align-items: center; min-height: 44px; text-decoration: none">連絡</a>
+</nav>
+</header>
+
+<main id="top" style="max-width: 1320px; margin: 0 auto; padding: 0 24px">
+
+<section style="padding: 72px 0 96px">
+<h1 style="margin: 0; font-size: clamp(48px, 10.5vw, 160px); font-weight: 900; line-height: 1.02; letter-spacing: -0.04em">鹿児島で、<br>Webアプリを<br>作っています。</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 32px 80px; padding-top: 64px">
+<p style="flex: 2 1 480px; min-width: 0; max-width: 40em; margin: 0; font-size: 18px; line-height: 2">しんごです。鹿児島大学の情報生体工学プログラム 3 年。授業やバイト、サークルで「これ面倒だな」と思ったことを、Claude Code と Codex を相棒にしてアプリにしています。2025 年 6 月から作ったのは 24 個。そのうち 10 個は、だれでも開いて使えます。</p>
+<p style="flex: 1 1 260px; min-width: 0; margin: 0; display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8">
+<span style="flex: none; width: 10px; height: 10px; margin-top: 8px; border-radius: 50%; background: var(--accent)"></span>
+<span><span style="color: #9A968D">いま</span><br>学祭で使うレジの本番前です（11/13〜16）</span>
+</p>
+</div>
+</section>
+
+<section id="works" style="padding: 0 0 120px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px; padding-bottom: 20px">
+<h2 style="margin: 0; font-size: 14px; font-weight: 700; color: var(--accent)">作品</h2>
+<div role="group" aria-label="分野で絞り込む" style="display: flex; flex-wrap: wrap; gap: 0 24px">
+<button type="button" data-filter="all" aria-pressed="true" style="min-height: 44px; padding: 0; border: none; border-bottom: 2px solid var(--accent); background: none; color: #EDEAE3; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">すべて 11</button>
+<button type="button" data-filter="life" aria-pressed="false" style="min-height: 44px; padding: 0; border: none; border-bottom: 2px solid transparent; background: none; color: #9A968D; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">暮らし 4</button>
+<button type="button" data-filter="campus" aria-pressed="false" style="min-height: 44px; padding: 0; border: none; border-bottom: 2px solid transparent; background: none; color: #9A968D; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">学生生活 2</button>
+<button type="button" data-filter="tool" aria-pressed="false" style="min-height: 44px; padding: 0; border: none; border-bottom: 2px solid transparent; background: none; color: #9A968D; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">ツール 3</button>
+<button type="button" data-filter="game" aria-pressed="false" style="min-height: 44px; padding: 0; border: none; border-bottom: 2px solid transparent; background: none; color: #9A968D; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer">ゲーム 2</button>
+</div>
+</div>
+
+<a data-cat="game" href="/works/open-world/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">01</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">open-world</span>
+<span style="font-size: 15px; color: #C9C5BC">家を建てて、売って、また建てる 3D のブラウザゲーム</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">ゲーム<br>2026.10〜 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/open-world.jpg" alt="open-world で家を建てている画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="tool" href="/works/temoto-photo/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">02</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: clamp(30px, 4.4vw, 60px); font-weight: 900; line-height: 1.15; letter-spacing: -0.03em">てもとフォト</span>
+<span style="font-size: 15px; color: #C9C5BC">写真を外に送らず、スマホの中だけで仕上げる写真編集</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">ツール<br>2026.10〜 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/temoto-photo.jpg" alt="てもとフォトの画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="campus" href="/works/timetable/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">03</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: clamp(30px, 4.4vw, 60px); font-weight: 900; line-height: 1.15; letter-spacing: -0.03em">鹿大じかんわり</span>
+<span style="font-size: 15px; color: #C9C5BC">シラバスの授業をそのまま入れられる、鹿大生の時間割</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">学生生活<br>2026.10 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/timetable.jpg" alt="鹿大じかんわりの画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="life" href="/works/go-out/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">04</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: clamp(30px, 4.4vw, 60px); font-weight: 900; line-height: 1.15; letter-spacing: -0.03em">よりみち鹿児島</span>
+<span style="font-size: 15px; color: #C9C5BC">県内のイベントとスポットを、日付と移動手段で探す</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">暮らし<br>2026.10〜 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/go-out.jpg" alt="よりみち鹿児島の画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="tool" href="/works/tech-feed/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">05</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">tech-feed</span>
+<span style="font-size: 15px; color: #C9C5BC">日本語の IT ニュースを 45 の配信元から集めた一覧</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">ツール<br>2026.10〜 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/tech-feed.jpg" alt="tech-feed の画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="life" href="/works/memory-map/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">06</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">memory-map</span>
+<span style="font-size: 15px; color: #C9C5BC">撮った写真を、撮った場所のピンにして地図に残す</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">暮らし<br>2026.10 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/memory-map.jpg" alt="memory-map の画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="life" href="/works/health-management/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">07</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: clamp(30px, 4.4vw, 60px); font-weight: 900; line-height: 1.15; letter-spacing: -0.03em">食事の記録アプリ</span>
+<span style="font-size: 15px; color: #C9C5BC">写真を撮るとカロリーが出る。友達と見せ合って続ける</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">暮らし<br>2026.10〜 招待制</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/health-management.jpg" alt="食事の記録アプリの画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; display: block">
+</a>
+
+<a data-cat="campus" href="/works/school-festival/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">08</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: clamp(30px, 4.4vw, 60px); font-weight: 900; line-height: 1.15; letter-spacing: -0.03em">学祭レジ</span>
+<span style="font-size: 15px; color: #C9C5BC">サークルの模擬店で使う、券売機みたいなレジ</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">学生生活<br>2026.11.13〜 本番</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/school-festival.jpg" alt="学祭レジの画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="life" href="/works/freedom-closet/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">09</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">freedom-closet</span>
+<span style="font-size: 15px; color: #C9C5BC">手持ちの服を撮っておくと、今日のコーデを 3 つ出す</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">暮らし<br>2026.11 試作を公開</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/freedom-closet.jpg" alt="freedom-closet の画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="game" href="/works/pa-chinko/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">10</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">pa-chinko</span>
+<span style="font-size: 15px; color: #C9C5BC">お金を使わないパチンコとパチスロのシミュレーター</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">ゲーム<br>2026.10〜 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/pa-chinko.jpg" alt="pa-chinko の画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+
+<a data-cat="tool" href="/works/happy-ideas/" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px; padding: 28px 0; border-top: 1px solid #2A2926; text-decoration: none">
+<span style="flex: 0 0 48px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: 14px; font-weight: 600; color: #9A968D">11</span>
+<span style="flex: 3 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(30px, 4.4vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">happy_ideas</span>
+<span style="font-size: 15px; color: #C9C5BC">アイデアを 110 個出して、110 個とも動く形にした</span>
+</span>
+<span style="flex: 1 1 140px; font-size: 13px; line-height: 1.7; color: #9A968D">ツール<br>2026.10 公開中</span>
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/happy-ideas.jpg" alt="happy_ideas の画面" style="flex: 0 1 280px; min-width: 0; width: 280px; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+</a>
+<div style="border-top: 1px solid #2A2926"></div>
+</section>
+
+<section id="about" style="display: flex; flex-wrap: wrap; gap: 24px 80px; padding: 0 0 120px">
+<h2 style="flex: 1 1 240px; margin: 0; font-size: 14px; font-weight: 700; color: var(--accent)">自己紹介</h2>
+<div style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 56px">
+<p style="margin: 0; font-size: clamp(22px, 2.6vw, 34px); font-weight: 700; line-height: 1.7">コードの大半は AI が書いています。自分の仕事は、何を作るかを決めて、使って、直すところを見つけること。得意なのはバイブコーディングと三線です。</p>
+<p style="margin: 0; max-width: 40em; font-size: 16px; line-height: 2; color: #C9C5BC">作ったものはすぐ公開して、使いながら直します。決めたことや作業の記録は Obsidian の保管庫「My海馬」に残しておき、次の作業のはじめに AI に読ませます。手間が少なくて長く続けられるやり方を選ぶようにしています。</p>
+
+<dl style="margin: 0; font-size: 15px">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><dt style="flex: 0 0 160px; color: #9A968D">画面</dt><dd style="flex: 1 1 320px; min-width: 0; margin: 0">React、TypeScript、Vite、Next.js、Three.js、Canvas</dd></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><dt style="flex: 0 0 160px; color: #9A968D">データと AI</dt><dd style="flex: 1 1 320px; min-width: 0; margin: 0">Supabase、Firebase、Claude API、スマホの中で動かす AI</dd></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><dt style="flex: 0 0 160px; color: #9A968D">公開とテスト</dt><dd style="flex: 1 1 320px; min-width: 0; margin: 0">GitHub Actions と Pages、Playwright、Vitest、axe-core</dd></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926; border-bottom: 1px solid #2A2926"><dt style="flex: 0 0 160px; color: #9A968D">相棒</dt><dd style="flex: 1 1 320px; min-width: 0; margin: 0">Claude Code、Codex</dd></div>
+</dl>
+
+<ol style="list-style: none; margin: 0; padding: 0; font-size: 15px">
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><span style="flex: 0 0 160px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; color: #9A968D">2025.06</span><span style="flex: 1 1 320px; min-width: 0">クラス向けの SNS 風サイト「5INet」。はじめて人に使ってもらった</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><span style="flex: 0 0 160px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; color: #9A968D">2025.07</span><span style="flex: 1 1 320px; min-width: 0">グループ開発で、TeX ファイルを共有してコンパイルする仕組み</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><span style="flex: 0 0 160px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; color: #9A968D">2025.10</span><span style="flex: 1 1 320px; min-width: 0">Google カレンダーからバイトのシフトと給料を集計する peetime</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><span style="flex: 0 0 160px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; color: #9A968D">2026.04</span><span style="flex: 1 1 320px; min-width: 0">LINE で希望を出すシフト管理</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926"><span style="flex: 0 0 160px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; color: #9A968D">2026.10</span><span style="flex: 1 1 320px; min-width: 0">1 か月で 10 個を公開。ここに載せた作品のほとんどはこの月</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 16px 0; border-top: 1px solid #2A2926; border-bottom: 1px solid #2A2926"><span style="flex: 0 0 160px; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; color: #9A968D">2026.11</span><span style="flex: 1 1 320px; min-width: 0">学祭の模擬店でレジを使う</span></li>
+</ol>
+</div>
+</section>
+
+<section id="contact" style="padding: 0 0 96px">
+<h2 style="margin: 0 0 20px; font-size: 14px; font-weight: 700; color: var(--accent)">連絡</h2>
+<a href="https://github.com/mamamaki12" style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 32px; padding: 24px 0; border-top: 1px solid #EDEAE3; border-bottom: 1px solid #2A2926; text-decoration: none">
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(40px, 8vw, 120px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em">GitHub</span>
+<span style="font-size: 16px">@mamamaki12 ↗</span>
+</a>
+</section>
+
+</main>
+
+<footer style="max-width: 1320px; margin: 0 auto; padding: 0 24px 40px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 13px; color: #9A968D">
+<span>© 2026 しんご</span>
+<a href="#top" style="display: inline-flex; align-items: center; min-height: 44px; color: #9A968D">上へ ↑</a>
+</footer>
+
+</div>
+<script>
+(function () {
+  var buttons = document.querySelectorAll('[data-filter]');
+  var rows = document.querySelectorAll('[data-cat]');
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var f = b.dataset.filter;
+      buttons.forEach(function (x) {
+        var on = x === b;
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+        x.style.color = on ? '#EDEAE3' : '#9A968D';
+        x.style.borderBottomColor = on ? 'var(--accent)' : 'transparent';
+      });
+      rows.forEach(function (r) { r.hidden = !(f === 'all' || r.dataset.cat === f); });
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>学祭レジ｜しんご</title>
+<meta name="description" content="サークルの模擬店で使うレジです。商品・個数・トッピングを押すと合計とおつりが出て、何がいつ何個売れたかが残ります。">
+<meta property="og:title" content="学祭レジ｜しんご">
+<meta property="og:description" content="サークルの模擬店で使うレジです。商品・個数・トッピングを押すと合計とおつりが出て、何がいつ何個売れたかが残ります。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mamamaki12.github.io/works/school-festival/">
+<meta property="og:image" content="https://mamamaki12.github.io/images/school-festival.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0C0C0C">
+<link rel="canonical" href="https://mamamaki12.github.io/works/school-festival/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<style>
+:root{--accent:#FF4B1F}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0C0C0C}
+img{height:auto}
+a{color:#EDEAE3}a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #0C0C0C; color: #EDEAE3; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 16px; line-height: 1.8">
+
+<header style="max-width: 1320px; margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: 14px">
+<a href="/" style="display: inline-flex; align-items: center; min-height: 44px; font-weight: 700; text-decoration: none">← 一覧</a>
+<span style="font-family: 'Archivo', sans-serif; font-stretch: 125%; font-weight: 600; letter-spacing: 0.08em; color: #9A968D">08 / 11</span>
+</header>
+
+<main style="max-width: 1320px; margin: 0 auto; padding: 0 24px 96px">
+<h1 style="margin: 48px 0 0; font-size: clamp(56px, 12vw, 184px); font-weight: 900; line-height: 1.02; letter-spacing: -0.04em">学祭レジ</h1>
+
+<div style="display: flex; flex-wrap: wrap; gap: 40px 80px; padding: 48px 0 64px">
+<p style="flex: 3 1 480px; min-width: 0; margin: 0; font-size: clamp(20px, 2.2vw, 28px); font-weight: 700; line-height: 1.7">サークルの模擬店で使うレジです。商品・個数・トッピングを押すと合計とおつりが出て、何がいつ何個売れたかが残ります。</p>
+<dl style="flex: 2 1 320px; min-width: 0; margin: 0; font-size: 14px">
+<div style="display: flex; gap: 16px; padding: 12px 0; border-top: 1px solid #2A2926"><dt style="flex: 0 0 88px; color: #9A968D">期間</dt><dd style="margin: 0">2026.10.27〜</dd></div>
+<div style="display: flex; gap: 16px; padding: 12px 0; border-top: 1px solid #2A2926"><dt style="flex: 0 0 88px; color: #9A968D">いま</dt><dd style="margin: 0">本番前。学祭は 11.13 – 11.16</dd></div>
+<div style="display: flex; gap: 16px; padding: 12px 0; border-top: 1px solid #2A2926"><dt style="flex: 0 0 88px; color: #9A968D">担当</dt><dd style="margin: 0">サークルのシステム担当として、要件定義から開発まで</dd></div>
+<div style="display: flex; gap: 16px; padding: 12px 0; border-top: 1px solid #2A2926; border-bottom: 1px solid #2A2926"><dt style="flex: 0 0 88px; color: #9A968D">技術</dt><dd style="margin: 0">React、TypeScript、Vite、Firebase（Firestore・認証・Hosting）、Vitest</dd></div>
+</dl>
+</div>
+
+<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/school-festival.jpg" alt="学祭レジで商品と個数とトッピングを選ぶ画面" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; display: block">
+
+<section style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 96px 0 0">
+<h2 style="flex: 1 1 240px; margin: 0; font-size: 14px; font-weight: 700; color: var(--accent)">なぜ作ったか</h2>
+<p style="flex: 3 1 560px; min-width: 0; margin: 0; font-size: 18px; line-height: 2">1 日に 200〜300 個売れる模擬店では、混んでくると注文の聞き間違いや計算ミスが起きて、1 日の終わりに売上と現金が合わなくなります。そのズレをなくすのが目的です。部員や実行委員の仕事を奪うのではなく、支える道具として作りました。</p>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 96px 0 0">
+<h2 style="flex: 1 1 240px; margin: 0; font-size: 14px; font-weight: 700; color: var(--accent)">できること</h2>
+<ul style="flex: 3 1 560px; min-width: 0; list-style: none; margin: 0; padding: 0; border-bottom: 1px solid #2A2926">
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">会計</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">合計とおつりを自動で計算。現金のみ。取り消しできる</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">商品の登録</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">値段、まとめ買い、トッピング、セット割引をアプリから変えられる</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">1 日の締め</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">お札と硬貨の枚数を入れると、記録との差が出る</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">売上速報</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">店にいない部員もスマホで今日の売れ行きを見られる。Excel にも出せる</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">複数の端末</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">同じ店舗 ID で入った端末は、すぐ同じ記録になる</span></li>
+</ul>
+</section>
+
+<section style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 96px 0 0">
+<h2 style="flex: 1 1 240px; margin: 0; font-size: 14px; font-weight: 700; color: var(--accent)">決めたこと</h2>
+<ul style="flex: 3 1 560px; min-width: 0; list-style: none; margin: 0; padding: 0; border-bottom: 1px solid #2A2926">
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">券売機の見た目</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">open-world で作った競馬の券売機の画面を流用した。ボタンが大きく、タブレットで押し間違えにくい</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">受け渡し画面はやめた</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">作ったけれど、実行委員に見せたら「いつものホワイトボードでやる」。初めは使わない設定にして、戻せるようにだけしてある</span></li>
+<li style="display: flex; flex-wrap: wrap; gap: 4px 32px; padding: 18px 0; border-top: 1px solid #2A2926"><strong style="flex: 0 0 200px; font-size: 17px">試験用と本番を分ける</strong><span style="flex: 1 1 320px; min-width: 0; font-size: 15px; color: #C9C5BC">練習で打ったデータが本番の売上に混ざらないよう、Firebase のプロジェクトを 2 つにした</span></li>
+</ul>
+</section>
+
+<a href="/works/freedom-closet/" style="display: block; margin-top: 120px; padding: 32px 0 0; border-top: 1px solid #EDEAE3; text-decoration: none">
+<span style="display: block; font-size: 14px; color: #9A968D">次の作品</span>
+<span style="display: block; font-family: 'Archivo', sans-serif; font-stretch: 125%; font-size: clamp(32px, 6.4vw, 96px); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em">freedom-closet →</span>
+</a>
+</main>
+</div>
+</body>
+</html>
