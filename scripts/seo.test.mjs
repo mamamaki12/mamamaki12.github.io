@@ -22,7 +22,7 @@ const jsonLd = (file) => {
 test('sitemap.xml にトップとすべての作品ページがある', () => {
   const xml = readFileSync(join(root, 'sitemap.xml'), 'utf8');
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  assert.deepEqual(new Set(locs), new Set([SITE, ...works.map((n) => `${SITE}works/${n}/`)]));
+  assert.deepEqual(new Set(locs), new Set([SITE, `${SITE}about/`, ...works.map((n) => `${SITE}works/${n}/`)]));
 });
 
 test('robots.txt が sitemap.xml を指している', () => {
@@ -32,6 +32,14 @@ test('robots.txt が sitemap.xml を指している', () => {
 test('トップの構造化データにサイトと人がある', () => {
   const types = jsonLd('index.html')['@graph'].map((x) => x['@type']);
   assert.deepEqual(types.sort(), ['Person', 'WebSite']);
+});
+
+test('自己紹介ページの構造化データに本名がある', () => {
+  const graph = jsonLd('about/index.html')['@graph'];
+  const person = graph.find((x) => x['@type'] === 'Person');
+  assert.ok(graph.some((x) => x['@type'] === 'ProfilePage'));
+  assert.equal(person.name, '牧浦 慎悟');
+  assert.ok(person.alternateName.includes('牧浦慎悟'));
 });
 
 test('作品ページの構造化データが読め、作品ページを指している', () => {

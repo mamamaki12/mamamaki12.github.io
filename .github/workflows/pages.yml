@@ -50,7 +50,7 @@ jobs:
       - name: 公開するファイルを集める
         run: |
           mkdir _site
-          cp -r index.html 404.html images works _site/
+          cp -r index.html 404.html images works about _site/
           # Google Search Console の所有者の確認用（消さない）
           cp googledacb7bfdaa89fa1d.html _site/
           # 検索エンジン向け（ページの一覧と、その場所の案内）
