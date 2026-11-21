@@ -24,6 +24,27 @@ img{height:auto}
 a{color:#EDEAE3}a:hover{color:var(--accent)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.shots{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 0 8px;scrollbar-width:thin;scrollbar-color:#2A2926 transparent}
+.shots{--u:calc((100% - (var(--n,6) - 1) * 16px) / var(--n,6))}
+.shot{position:relative;flex:0 0 var(--u);min-width:150px;scroll-snap-align:start;padding:0;border:0;border-radius:20px;background:none;cursor:zoom-in}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:390 / 844;object-fit:cover;object-position:top;border-radius:20px;outline:1px solid #2A2926;outline-offset:-1px;transition:transform .2s}
+.shot:hover img{transform:translateY(-4px)}
+.lb{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:16px}
+.shot[data-orient=landscape]{flex-basis:calc(var(--u) * 2 + 16px);min-width:316px;align-self:center}
+.shot[data-orient=landscape] img{aspect-ratio:844 / 390}
+.shot[data-video]::after{content:"";position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(12,12,12,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6.5v11l9-5.5z' fill='%23EDEAE3'/%3E%3C/svg%3E") center / 28px no-repeat;pointer-events:none}
+.lb[hidden],.lb-img[hidden]{display:none}
+.lb-bg{position:absolute;inset:0;background:rgba(0,0,0,.9)}
+.lb-img{position:relative;display:block;height:min(calc(100vh - 104px),calc((100vw - 32px) * 844 / 390),1300px);height:min(calc(100dvh - 104px),calc((100vw - 32px) * 844 / 390),1300px);width:auto;aspect-ratio:390 / 844;border-radius:24px;will-change:transform}
+.lb-wide .lb-img{height:auto;width:min(calc(100vw - 32px),calc((100vh - 104px) * 844 / 390),1400px);width:min(calc(100vw - 32px),calc((100dvh - 104px) * 844 / 390),1400px);aspect-ratio:844 / 390}
+.lb-video{background:#000}
+.lb-bar{position:relative;display:flex;align-items:center;gap:24px;color:#EDEAE3;font-size:15px}
+.lb-n{margin:0;min-width:4em;text-align:center;font-variant-numeric:tabular-nums}
+.lb button{width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.1);color:#EDEAE3;font:inherit;font-size:24px;line-height:1;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.2)}
+.lb-x{position:absolute;top:12px;right:12px;z-index:1}
+@media (prefers-reduced-motion:reduce){.shot img{transition:none}.shot:hover img{transform:none}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -89,7 +110,15 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 </dl>
 </div>
 
-<img loading="lazy" decoding="async" width="2000" height="1250" src="/images/memory-map.jpg" alt="記憶地図の全国攻略の画面" style="width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center; display: block">
+<div class="shots" role="group" aria-label="動画と画面（タップで大きく表示）" style="--n: 7">
+<button type="button" class="shot" data-video="/images/shots/memory-map-video.mp4" data-orient="portrait" aria-label="動画を再生：地図の写真を開き、新しい写真を撮影場所つきで保存する"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-poster.jpg" alt="地図の写真を開き、新しい写真を撮影場所つきで保存する"></button>
+<button type="button" class="shot" aria-label="大きく表示：九州の地図に、撮った写真が場所ごとに並ぶ"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-1.jpg" alt="九州の地図に、撮った写真が場所ごとに並ぶ"></button>
+<button type="button" class="shot" aria-label="大きく表示：写真を開く。湯之平展望所から見た桜島"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-2.jpg" alt="写真を開く。湯之平展望所から見た桜島"></button>
+<button type="button" class="shot" aria-label="大きく表示：全国攻略。写真を撮った市が緑になる"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-3.jpg" alt="全国攻略。写真を撮った市が緑になる"></button>
+<button type="button" class="shot" aria-label="大きく表示：思い出の一覧。月ごとにまとまる"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-4.jpg" alt="思い出の一覧。月ごとにまとまる"></button>
+<button type="button" class="shot" aria-label="大きく表示：新しい写真を保存。撮影場所が地図に出る"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-5.jpg" alt="新しい写真を保存。撮影場所が地図に出る"></button>
+<button type="button" class="shot" aria-label="大きく表示：鹿児島県の攻略。鹿児島市はコンプリート"><img loading="lazy" decoding="async" width="780" height="1688" src="/images/shots/memory-map-6.jpg" alt="鹿児島県の攻略。鹿児島市はコンプリート"></button>
+</div>
 
 <section style="display: flex; flex-wrap: wrap; gap: 16px 80px; padding: 96px 0 0">
 <h2 style="flex: 1 1 240px; margin: 0; font-size: 14px; font-weight: 700; color: var(--accent)">なぜ作ったか</h2>
@@ -121,5 +150,132 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 </a>
 </main>
 </div>
+<script>
+(function () {
+  var shots = [].slice.call(document.querySelectorAll('.shot'));
+  if (!shots.length) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var box = document.createElement('div');
+  box.className = 'lb';
+  box.hidden = true;
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-modal', 'true');
+  box.setAttribute('aria-label', '画面の拡大表示');
+  box.innerHTML = '<div class="lb-bg"></div>' +
+    '<button type="button" class="lb-x" aria-label="閉じる">×</button>' +
+    '<img class="lb-img" alt="">' +
+    '<video class="lb-img lb-video" controls muted loop playsinline preload="none" hidden></video>' +
+    '<div class="lb-bar"><button type="button" class="lb-p" aria-label="前の画面">‹</button>' +
+    '<p class="lb-n" aria-live="polite"></p>' +
+    '<button type="button" class="lb-nx" aria-label="次の画面">›</button></div>';
+  document.body.appendChild(box);
+  var bg = box.querySelector('.lb-bg');
+  var img = box.querySelector('img.lb-img');
+  var vid = box.querySelector('video');
+  var num = box.querySelector('.lb-n');
+  var buttons = [].slice.call(box.querySelectorAll('button'));
+  var cur = 0;
+  var busy = false;
+
+  function thumb(i) { return shots[i].querySelector('img'); }
+  // いま大きく出しているもの（画像か動画）
+  function shown() { return vid.hidden ? img : vid; }
+  function show(i) {
+    cur = (i + shots.length) % shots.length;
+    var s = shots[cur], t = thumb(cur);
+    box.classList.toggle('lb-wide', s.dataset.orient === 'landscape');
+    if (s.dataset.video) {
+      img.hidden = true;
+      vid.hidden = false;
+      vid.poster = t.currentSrc || t.src;
+      vid.setAttribute('aria-label', t.alt);
+      if (vid.getAttribute('src') !== s.dataset.video) vid.src = s.dataset.video;
+      vid.currentTime = 0;
+      var p = vid.play();
+      if (p && p.catch) p.catch(function () {});
+    } else {
+      vid.pause();
+      vid.hidden = true;
+      img.hidden = false;
+      img.src = t.currentSrc || t.src;
+      img.alt = t.alt;
+    }
+    num.textContent = (cur + 1) + ' / ' + shots.length;
+  }
+  // 小さい画面の位置から、大きい画面へ（またはその逆へ）動かすための変形
+  function fromThumb() {
+    var a = thumb(cur).getBoundingClientRect();
+    var b = shown().getBoundingClientRect();
+    if (!a.width || !b.width) return 'none';
+    var dx = (a.left + a.width / 2) - (b.left + b.width / 2);
+    var dy = (a.top + a.height / 2) - (b.top + b.height / 2);
+    return 'translate(' + dx + 'px,' + dy + 'px) scale(' + (a.width / b.width) + ')';
+  }
+  function open(i) {
+    show(i);
+    box.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    if (!reduce && img.animate) {
+      shots[cur].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+      shown().animate([{ transform: fromThumb() }, { transform: 'none' }], { duration: 460, easing: 'cubic-bezier(.34,1.56,.64,1)' });
+      bg.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 220, easing: 'ease-out' });
+    }
+    box.querySelector('.lb-x').focus();
+  }
+  function done() {
+    vid.pause();
+    box.hidden = true;
+    busy = false;
+    document.documentElement.style.overflow = '';
+    shots[cur].focus();
+  }
+  function close() {
+    if (box.hidden || busy) return;
+    if (reduce || !img.animate) return done();
+    busy = true;
+    shots[cur].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    var el = shown();
+    bg.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 220, easing: 'ease-in', fill: 'forwards' });
+    el.animate([{ transform: 'none' }, { transform: fromThumb() }], { duration: 240, easing: 'ease-in', fill: 'forwards' }).onfinish = function (e) {
+      done();
+      e.target.cancel();
+      bg.getAnimations().forEach(function (x) { x.cancel(); });
+    };
+  }
+  function step(d) {
+    show(cur + d);
+    if (!reduce && img.animate) shown().animate([{ opacity: 0, transform: 'translateX(' + (d * 24) + 'px)' }, { opacity: 1, transform: 'none' }], { duration: 200, easing: 'ease-out' });
+  }
+
+  shots.forEach(function (s, i) { s.addEventListener('click', function () { open(i); }); });
+  bg.addEventListener('click', close);
+  img.addEventListener('click', close);
+  box.querySelector('.lb-x').addEventListener('click', close);
+  box.querySelector('.lb-p').addEventListener('click', function () { step(-1); });
+  box.querySelector('.lb-nx').addEventListener('click', function () { step(1); });
+  document.addEventListener('keydown', function (e) {
+    if (box.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); close(); }
+    else if (e.key === 'ArrowLeft') step(-1);
+    else if (e.key === 'ArrowRight') step(1);
+    else if (e.key === 'Tab') {
+      var list = buttons.concat(vid.hidden ? [] : [vid]);
+      var k = list.indexOf(document.activeElement);
+      var next = e.shiftKey ? (k <= 0 ? list.length - 1 : k - 1) : (k === list.length - 1 ? 0 : k + 1);
+      e.preventDefault();
+      list[next].focus();
+    }
+  });
+  // スマホ：左右にスワイプで前後の画面へ（動画の操作バーの上は除く）
+  var sx = null, sy = null;
+  box.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+  box.addEventListener('touchend', function (e) {
+    if (sx === null) return;
+    var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    sx = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) { e.preventDefault(); step(dx < 0 ? 1 : -1); }
+  });
+})();
+</script>
 </body>
 </html>
